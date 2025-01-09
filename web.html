@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BearBrick Shop</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333;
+            font-size: 40px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        header {
+            background-color: #ffd000;
+            padding: 100px;
+            text-align: center;
+            font-size: 100px;
+            font-weight: bold;
+            color: #030a47;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        /* Typing animation for the "BearBrick" text */
+        .animated-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 5s steps(9) infinite, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+
+            25% {
+                width: 2.5em;
+            }
+
+            50% {
+                width: 5em;
+            }
+
+            75% {
+                width: 7.5em;
+            }
+
+            100% {
+                width: 9em;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: #ffd000;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        nav button {
+            background-color: #ffd000;
+            padding: 10px 20px;
+            color: #000000;
+            cursor: pointer;
+            font-size: 25px;
+            border: none;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        nav button:hover {
+            color: #ffffff;
+        }
+
+        main {
+            padding: 20px;
+            color: #333;
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: #ffd000;
+            text-align: center;
+            padding: 1px;
+            font-size: 15px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .image-container {
+            display: flex;
+            overflow: hidden;
+            gap: 30px;
+            padding: 20px;
+            position: relative;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .image-wrapper {
+            display: inline-block;
+            text-align: center;
+            padding: 5px;
+            border-radius: 10px;
+            background: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .image-caption {
+            font-size: 18px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .scroll-button {
+            position: absolute;
+            top: 70%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 24px;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .scroll-left {
+            left: 0;
+        }
+
+        .scroll-right {
+            right: 0;
+        }
+
+        img {
+            width: 300px;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+        .kokum {
+            background-color: #ffd000;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #fff;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        p1 {
+            font-size: 20px;
+            color: #363535f6;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            max-width: 1000px;
+            padding: 50px;
+            margin: 0 auto;
+            border-radius: 50px;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #fff;
+            padding: 12px 24px;
+            font-size: 20px;
+            color: #000000;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+            border: none;
+        }
+
+        .shop-now {
+            background-color: #ffffff;
+        }
+
+        .more-info {
+            background-color: #2e2c2c;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 40px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .buttonsen {
+            background-color: #ffffff;
+            color: #ff0101;
+        }
+
+        .buttonsen button {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .bearbrick-section {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bearbrick-box {
+            background-color: #ffffff;
+            padding: 30px;
+            width: 60%;
+            /* Adjust the width as per your need */
+            text-align: center;
+            /* Adds a border around the box */
+        }
+
+        .bearbrick-title {
+            font-size: 32px;
+            color: #333333;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            /* Aligns the content to the left */
+        }
+
+        .bearbrick-description {
+            font-size: 10px;
+            color: #555555;
+            line-height: 1.8;
+        }
+
+        footer img {
+            width: 40px;
+            /* Adjust size of the icons */
+            height: 40px;
+        }
+
+        footer a {
+            display: inline-block;
+            margin: 0 8px;
+            /* Adjust space between icons */
+        }
+
+        .bearbrick-title img {
+            margin-right: 100px;
+
+        }
+
+        .image-wrapper:hover img {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="animated-text">BearBrick shop</span><br>
+        <nav>
+            <a href="web.html"><button>home</button></a>
+            <a href="shop.html"><button>Shop</button></a>
+            <a href="soldout.html"><button>soldout</button></a>
+            <a href="comingsoon.html"><button>coming soon</button></a>
+            <a href="know.html"><button>ทำความรู้จักกับ BearBrick</button></a>
+            <a href="Profile.html"><button>Profile</button></a>
+        </nav>
+
+    </header>
+    <main>
+
+        <center>
+            <p>BEARBRICK</p>
+        </center>
+
+    </main>
+    <div class="image-container" id="imageContainer">
+        <div class="image-wrapper">
+            <img src="bb011.jpg" alt="BearBrick Image" />
+            <div class="image-caption">Royal Selangor Steampunk 400% <br><br> Price 3,000.00 bath</div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb12.webp" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick set - Keith Haring v11 <br><br>Price 3,000.00 bath</div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb13.webp" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick - Cookiemonster (Suit ed.)<br><br>Price 153,000.00 bath</div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb14.webp" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick - Nike Tech Fleece N98<br><br>Price 113,000.00 bath</div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb15.webp" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick - Donatello Chrome (Teenage Mutant Ninja Turtles)<br><br>Price 
+                123,000.00 bath</div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb06.jpg" alt="BearBrick Image" />
+            <div class="image-caption">Bearbrick x Nike SB 1000% White - Novelship <br><br> Price 150,000.00 bath</div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb07.jpg" alt="BearBrick Image" />
+            <div class="image-caption">Bearbrick x Star Wars Jango Fett 400% Blue/ Silver<br><br> Price 110,000.00 bath
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb008.jpg" alt="BearBrick Image" />
+            <div class="image-caption">Medicom Toy - JJ20 Be @rbrick 1000%<br><br>Price 210,000.00 bath </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb16.webp" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick - Tony The Tiger Flocky (Kelloggs)<br><br>Price 341,000.00 bath </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb17.webp" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick - Minnie Mouse (Lunch Box)<br><br>Price 263,000.00 bath </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb19.jpg" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick - Krang's Robot (Teenage Mutant Ninja Turtles)<br><br>Price 132,000.00
+                bath </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb20.webp" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick - The Astrosmurf (The Smurfs)<br><br>Price 216,000.00 bath </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="bb21.jpg" alt="BearBrick Image" />
+            <div class="image-caption">1000% Bearbrick - The Purple Smurf (The Smurfs)<br><br>Price 116,000.00 bath </div>
+        </div>
+    </div>
+    <button class="scroll-button scroll-left" onclick="scrollLeft()">
+        < </button>
+    </button>
+    <button class="scroll-button scroll-right" onclick="scrollRight()"> > </button>
+    <div class="buttonsen">
+        <a href="shop.html">
+            <center><button>สิ้นค้าทั้งหมด</button></center>
+        </a><br>
+    </div>
+    <div class="kokum">
+        <h1> ยินดีต้อนรับสู่ Bearbrick Shop</h1>
+        <p1>ร้านขายตุ๊กตา Bearbrick ของแท้ ในประเทศไทย เรามีสินค้าให้เลือกหลากหลายคอเลคชั่น
+            ไม่ว่าคุณจะมองหาไซส์ไหน
+            คอลเลคชั่นไหน เรามีครบจบ ให้คุณได้เลือกซื้อที่นี่ทีเดียว ที่มีให้ครบจบตามที่คุณต้องการ</p1>
+        <div class="button-container">
+            <a href="shop.html"><button class="shop-now">shop</button></a>
+            <a href="Profile.html"><button class="more-info">ติดต่อผู้ขาย</button></a>
+        </div>
+    </div>
+    <div class="bearbrick-section">
+        <div class="bearbrick-box">
+            <h3>Bearbrick (แบร์บริค)</h3>
+            <p class="bearbrick-title"><img src="bb30.jpg">
+                แบร์บริค กลายเป็นที่รู้จักและโด่งดังในวงการนักสะสมของเล่นและอาร์ตติสต์แทบทั่วทุกมุมโลก
+                ด้วยเอกลักษณ์เฉพาะตัว หัวเป็นหมี
+                ตัวเป็นเลโก้พุงโต ที่ขยับ แขน ขา และ ยืนได้ ยังมีการขายแบบ Blind Box
+                ที่ทำให้ได้ลุ้นของข้างในว่าจะได้ลวดลายไหน ทำให้เกิดความสนุกของนักสะสม
+                และนอกจากลวดลายที่ออกมาจากแบรนด์ที่ใน 1
+                ปีจะออกมา 2 ซีรี่ย์ ยังมีการร่วมกันออกแบบลวดลายกับศิลปินชื่อดัง และแบรนด์ชั้นนำทั่วโลก
+                เลยเป็นมากกว่าของเล่นแต่ถือเป็นงานศิลปะที่มีมูลค่าน่าสะสมอีกแบบนึง
+            </p>
+        </div>
+    </div>
+
+    <footer>BearBrick shop <br><a href="https://www.facebook.com/tanapat.get"><img src="facebook.png" </a>
+            <a href="https://www.instagram.com/thte_g/"><img src="instagram.webp" </a>
+    </footer>
+
+    <script>
+        function scrollLeft() {
+            const container = document.getElementById('imageContainer');
+            container.scrollBy({
+                left: -220,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            const container = document.getElementById('imageContainer');
+            container.scrollBy({
+                left: 220,
+                behavior: 'smooth'
+            });
+        }
+
+        function autoScroll() {
+            const container = document.getElementById('imageContainer');
+            const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+            if (container.scrollLeft >= maxScrollLeft) {
+                container.scrollTo({
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                scrollRight();
+            }
+        }
+
+        setInterval(autoScroll, 3000);
+    </script>
+</body>
+
+</html>

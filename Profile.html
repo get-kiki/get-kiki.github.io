@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BearBrick</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333;
+            font-size: 40px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        header {
+            background-color: #ffd000;
+            padding: 100px;
+            text-align: center;
+            font-size: 120px;
+            font-weight: bold;
+            color: #030a47;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .animated-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 5s steps(9) infinite, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+
+            25% {
+                width: 2.5em;
+            }
+
+            50% {
+                width: 5em;
+            }
+
+            75% {
+                width: 7.5em;
+            }
+
+            100% {
+                width: 9em;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: #ffd000;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        nav button {
+            background-color: #ffd000;
+            padding: 10px 20px;
+            color: #000000;
+            cursor: pointer;
+            font-size: 28px;
+            border: none;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        nav button:hover {
+            color: #ffffff;
+        }
+
+        main {
+            padding: 20px;
+            color: #333;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #ffd000;
+            text-align: center;
+            padding: 1px;
+            font-size: 18px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        footer img {
+            width: 40px;
+            height: 40px;
+        }
+
+        footer a {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .bp {
+            border: 1px solid #000000;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            background-color: #ffffff;
+            padding: 10px;
+            max-width: 70%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .bp img {
+            width: 450px;
+            height: 700px;
+            display: block;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .bp h4 {
+            margin: 0;
+            padding-bottom: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
+        }
+
+        .text1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="animated-text">BearBrick shop</span><br>
+        <nav>
+            <a href="web.html"><button>home</button></a>
+            <a href="shop.html"><button>Shop</button></a>
+            <a href="soldout.html"><button>soldout</button></a>
+            <a href="comingsoon.html"><button>coming soon</button></a>
+            <a href="know.html"><button>ทำความรู้จักกับ BearBrick</button></a>
+            <a href="Profile.html"><button>Profile</button></a>
+        </nav>
+    </header>
+
+    <main>
+    </main>
+
+    <div class="bp">
+        <h4>PROFILE</h4><br>
+        <img src="profile1.jpeg" alt="BearBrick Profile Image"> <br>
+        <div class="text1"> นาย ธนภัทร ธีระพัชรรังษี รหัสนิสิต 66312268 คณะวิทยาศาสตร์ <br>สาขาเทคโนโลยีสารสนเทศ
+            ชื่อเล่น เกท ปี2<br>ทำไมถึงเลือกทำเว็ปนี้: เพราะชอบ bearbrick อยู่เเล้วเลยเลือกทำครับ<br>เบอร์โทร
+            082-085-1875 <br>ลิ้ง IG กับ facebook อยุ่ด้านล่างเลยครับ<br>↓↓</div>
+    </div>
+
+    <footer>
+        BearBrick shop <br>
+        <a href="https://www.facebook.com/tanapat.get"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/thte_g/"><img src="instagram.webp" alt="Instagram"></a>
+    </footer>
+</body>
+
+</html>

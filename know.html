@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BearBrick</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333;
+            font-size: 40px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        header {
+            background-color: #ffd000;
+            padding: 100px;
+            text-align: center;
+            font-size: 120px;
+            font-weight: bold;
+            color: #030a47;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .animated-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 5s steps(9) infinite, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+
+            25% {
+                width: 2.5em;
+            }
+
+            50% {
+                width: 5em;
+            }
+
+            75% {
+                width: 7.5em;
+            }
+
+            100% {
+                width: 9em;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: #ffd000;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        nav button {
+            background-color: #ffd000;
+            padding: 10px 20px;
+            color: #000000;
+            cursor: pointer;
+            font-size: 28px;
+            border: none;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        nav button:hover {
+            color: #ffffff;
+        }
+
+        main {
+            padding: 20px;
+            color: #333;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #ffd000;
+            text-align: center;
+            padding: 1px;
+            font-size: 18px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        footer img {
+            width: 40px;
+            height: 40px;
+        }
+
+        footer a {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            /* Push content to the left and right */
+            /* Vertically align text and image */
+            padding: 20px;
+        }
+
+        .text {
+            font-size: 50px;
+            margin-left: 250px;
+            /* Space between text and image */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .container img {
+            width: 900px;
+            /* Set the image size */
+            height: 600px;
+            /* Maintain aspect ratio */
+        }
+
+        p {
+            font-size: 20px;
+            padding-right: 30px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+
+        .con2 {
+            /* ปรับขนาดของกรอบรูป */
+            border: 1px solid #000000;
+            /* ลดขนาดเส้นขอบให้บางลง */
+            border-radius: 15px;
+            /* ทำให้มุมของขอบภาพโค้งมน */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            /* เพิ่มเงาให้กรอบดูมีมิติ */
+            background:linear-gradient(to bottom,  #ffd000, #e7aa26);
+            padding: 10px;
+            max-width: 80%;
+            /* ลดความกว้างของกรอบรูป */
+            margin: 20px auto;
+            /* จัดให้อยู่ตรงกลาง */
+        }
+
+        .container2 {
+            display: flex;
+        }
+
+        .text1 {
+            font-size: 25px;
+            left: 5px;
+            text-align: center;
+            /* จัดข้อความให้อยู่กึ่งกลางในแนวนอน */
+            margin: 0 auto;
+            /* จัดตำแหน่งให้อยู่กลางคอนเทนเนอร์ */
+        }
+
+        .con2 img {
+            width: 400px;
+            /* ปรับขนาดภาพเป็น 80% ของพื้นที่ */
+            height: auto;
+            /* รักษาอัตราส่วนของภาพ */
+            margin: 10px;
+            /* เพิ่มช่องว่างรอบภาพ */
+            padding-right: 20px;
+        }
+
+        .container3 {
+            display: flex;
+            justify-content: space-between;
+            /* Push content to the left and right */
+            /* Vertically align text and image */
+        }
+
+        .container3 img {
+            width: 70%;
+            /* Set the image size */
+            height: 50%;
+            /* Maintain aspect ratio */
+            padding-left: 50px;
+        }
+
+        .text2 {
+            font-size: 60px;
+            padding-left: 50px;
+            padding-right: 30px;
+        }
+
+        .p3 {
+            font-size: 20px;
+        }
+
+        .h6 {
+            font-size: 30px;
+            color: #003cff;
+        }
+
+        .p4 {
+            font-size: 20px;
+            padding-right: 30px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="animated-text">BearBrick shop</span><br>
+        <nav>
+            <a href="web.html"><button>home</button></a>
+            <a href="shop.html"><button>Shop</button></a>
+            <a href="soldout.html"><button>soldout</button></a>
+            <a href="comingsoon.html"><button>coming soon</button></a>
+            <a href="know.html"><button>ทำความรู้จักกับ BearBrick</button></a>
+            <a href="Profile.html"><button>Profile</button></a>
+        </nav>
+    </header>
+
+    <main>
+    </main>
+
+    <!-- Image and Text aligned to the left with image on the right -->
+    <div class="container">
+        <div class="text">Bearbrick คืออะไร ?<p>BE@RBRICK คือรูปแบบของของเล่นสะสมที่ดูคล้ายเลโก้ผสมหมีน่ารักตัวหนึ่ง
+                โดยมีหัวน่ารักๆ เป็นหมีผลิตและออกแบบโดยบริษัท MediCom Toy Incorporated
+                (ผู้ผลิตของเล่นยักษ์ใหญ่ของญี่ปุ่น) BE@RBRICK จะมีหัวเป็นหมี ประกอบขึ้นจากชิ้นส่วนทั้งหมด 9 ชิ้น คือ หัว
+                ลำตัว แขน มือ สะโพก และขา ในขณะที่ Kubrick จะมีรูปร่างลักษณะคล้ายกับมนุษย์มากกว่า คาแรกเตอร์ BE@RBRICK
+                มีความผสมผสานระหว่างของเล่นและงานศิลปะ ที่สร้างชื่อเสียงโด่งดังไปทั่วโลกBE@RBRICK
+                ตัวแรกถูกวางจำหน่ายวันที่ 27 พฤษภาคม 2001 ถูกสร้างขึ้นเพื่อมอบให้เป็นของขวัญที่ระลึกสำหรับผู้ร่วมงาน
+                World Character Convention ครั้งที่ 12 ที่โตเกียวประเทศญี่ปุ่น ผลิตโดยบริษัท Medicom Toy
+                ประเทศญี่ปุ่นและมีคุณ Tatsuhiko Akashi เป็นเจ้าของ</p>
+
+            <div class="p4">
+                <p2>โดยตุ๊กตาแบร์บริคตัวแรกนั้นก็ยังเป็นแค่ฟิกเกอร์พลาสติกสีพื้นที่มีหัวเป็นหมี สกรีนตัวอักษร '@'
+                    ตรงหน้าอก และยังมีดีไซน์ช่วงลำตัวที่ถูกหยิบยืมมาจากรุ่นพี่อย่าง KUBRICK
+                    แบรนด์ของเล่นรูปแบบฟิกเกอร์รุ่นแรกของบริษัทอีกด้วย
+                    จากของที่ระลึกที่แจกให้แขกในงานในวันนั้นจะได้รับความนิยมและกลายเป็นกระแสอย่างมากในเวลาต่อมา
+                    จนทำให้แบร์บริคได้ไป collabs กับแบรนด์ชั้นนำต่างๆ มากมาย
+                    จึงทำให้แบร์บริคกลายเป็นของสะสมที่มีคุณค่าและราคาแพงในที่สุด</p2>
+            </div>
+        </div>
+        <img src="know1.jpg" alt="Image">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="con2">
+        <div class="container2">
+            <div class="img2"><img src="know2.jpg"></div>
+            <div class="text1">
+                <h3>ทำไมแบร์บริค (Bearbrick) ถึงมีราคาแพง ?</h1><br>
+                    <p2>BE@RBRICK
+                        ผลิตออกมาในจำนวนจำกัดและกลายมาเป็นของสะสมที่มีราคาแพง
+                        ก็เพราะว่าแบร์บริคมีการผลิตออกมาวางจำหน่ายในจำนวนจำกัดแบบ Limited Edition
+                        ในแต่ละซีรีส์เมื่อจำหน่ายหมดแล้วก็จะไม่มีการผลิตเพิ่ม
+                        อีกทั้งแบร์บริคในบางซีรีส์ก็ยังมีการวางจำหน่ายแค่เฉพาะบางประเทศหรือจำหน่ายแบบ Pre Order
+                        ในเวลาที่จำกัด ซึ่งทำให้แบร์บริคจะมีราคาเปิดตัวที่สูงแล้ว
+                        ราคาประมูลหรือราคาที่ถูกนำไปปล่อยต่อในตลาดก็ยังสูงขึ้นได้อีกหลายเท่า
+                        โดยสถิติแล้วพบว่าราคาขายต่อส่วนใหญ่จะสูงขึ้นมากกว่า 7%</p2>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container3">
+        <div class="text2">แบร์บริค ของเล่น ของสะสม <br>ที่มีต้นกำเนิดมาจากประเทศญี่ปุ่น<div class="p3">
+                <p3><br>ถูกออกแบบและผลิตขึ้นโดย
+                    Medicom Toy Incorporated บริษัทผลิตของเล่นยักษ์ใหญ่ ที่ก่อตั้งมาเกือบ 30 ปี Bearbrick
+                    เป็นฟิกเกอร์ที่มีเอกลักษณ์พิเศษ หัวเป็นหมี ตัวเป็นทรงหุ่นยนต์มนุษย์คล้ายเลโก้ Kubrick ที่ประกอบจาก 9
+                    ชิ้นส่วน หัว ลำตัว สะโพก แขน มือ และ ขา โดยผลิตจากพลาสติกแข็ง และยังมีวัสดุอื่นเช่นไม้ โลหะ สักหลาด
+                    หรือ
+                    พลาสติกเรืองแสงในที่มืด
+                    โดยบริษัทผู้ผลิตตั้งใจออกแบบให้เหมือนผ้าใบวาดรูป ที่สามารถแต่งแต้มสีสันลงไปได้ตามที่ต้องการ
+                    และได้ถูกสร้างขึ้นครั้งแระเพื่อมอบให้เป็นของขวัญที่ระลึกสำหรับผู้ร่วมงาน World Character Convention
+                </p3>
+            </div>
+        </div>
+        <img src="know3.jpeg">
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer>BearBrick shop <br>
+        <a href="https://www.facebook.com/tanapat.get"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/thte_g/"><img src="instagram.webp" alt="Instagram"></a>
+    </footer>
+</body>
+
+</html>
